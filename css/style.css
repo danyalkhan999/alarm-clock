@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1d3557; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999; 
+}
+body {
+  background: #1d3557;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  background-color: #fff;
+  padding: 30px 30px 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.clock-icon{
+  font-size: 3.5rem;
+  color: #1d3557;
+}
+
+.wrapper h1 {
+  margin: 24px 0;
+  font-size: 30px;
+  color: #ff7900;
+}
+
+.wrapper .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .wrapper .content.disable {
+  opacity: 0.6;
+  pointer-events: none;
+} */
+
+.column {
+  padding: 0 10px;
+  border: 2px solid #999;
+  border-radius: 6px;
+}
+
+.column select {
+  outline: none;
+  border: none;
+  height: 35px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.wrapper button {
+  /* width: 100%; */
+  margin: 11px 22px;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #1d3557;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+hr {
+  background-color: #999;
+}
+
+.alarm-list {
+  height: auto;
+}
+
+.alarms {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  background-color: #1d3557;
+  border-radius: 9px;
+  padding: 4px 0;
+}
+
+.alarms span {
+  color: #fff;
+  font-size: 17px;
+  margin: auto 7px;
+}
+
+.alarms button {
+  margin: auto 5px;
+  padding: 6px 7px;
+  border: 2px solid ;
+}
+
+.alarms button:hover{
+  background: #ff7900;
+}
+
+.bottom-center{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 27px;
+  color: #ff7900;
+  font-size: 17px;
+}
+
+.heart {
+  color: #d00000;
+}

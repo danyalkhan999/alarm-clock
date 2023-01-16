@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm-Clock</title>
+    <script
+      src="https://kit.fontawesome.com/19f8368dd2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/3094/3094972.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <i class="fa-regular fa-clock fa-spin clock-icon"></i>
+      <h1>00:00:00 AM</h1>
+
+      <div class="content">
+        <div class="column">
+          <select id="hour">
+            <option value="Hr" selected hidden>Hr</option>
+          </select>
+        </div>
+        <div class="column">
+          <select id="min">
+            <option value="Min" selected hidden>Min</option>
+          </select>
+        </div>
+        <div class="column">
+          <select id="sec">
+            <option value="Sec" selected hidden>Sec</option>
+          </select>
+        </div>
+        <div class="column">
+          <select id="session">
+            <option value="Meridian" selected hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="set">Set Alarm</button>
+      <button type="reset" onclick="clearAlarm()" class="stop">Stop Alarm!</button>
+      <!-- <button class="reset">Reset</button> -->
+
+      <div class="alarm-list">
+        <hr />
+        <!-- <div class="alarms">
+          <span>00 : 00 AM</span>
+          <button class="delete-btn" onclick="remove(this.value)">Remove</button>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="bottom-center">
+      <p>Made with <i class="fa-solid fa-beat fa-heart heart" style="--fa-animation-duration: 2s;"></i> in India</p>
+    </div>
+    
+    <script src="./js/index.js"></script>
+  </body>
+ 
+</html>
