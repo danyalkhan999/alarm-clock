@@ -11,7 +11,7 @@ let alarmTime,
   alarmList = [];
 let alarmTimeout = null;
 const  alarmSound = new Audio("./audio/twirling.mp3")
-alarmSound.loop = true;
+
 
 // create options for hour
 for (let h = 12; h > 0; h--) {
@@ -44,7 +44,10 @@ for (let m = 2; m > 0; m--) {
 // ring alarm
 
 function ringAlarm(time) {
+  alarmSound.load();
   alarmSound.play();
+  alarmSound.loop = true;
+
   alarmIcon.firstElementChild.classList.remove("fa-spin");
   alarmIcon.firstElementChild.classList.add("fa-shake");
 }
@@ -55,7 +58,7 @@ function ringAlarm(time) {
 
 function clearAlarm() {
   alarmSound.pause();
-  alarmSound.loop = false;
+
   alarmIcon.firstElementChild.classList.add("fa-spin");
   alarmIcon.firstElementChild.classList.remove("fa-shake");
   console.log("stop alarm")
