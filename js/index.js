@@ -10,8 +10,7 @@ let alarmTime,
   isAlarmSet = false,
   alarmList = [];
 let alarmTimeout = null;
-const  alarmSound = new Audio("./audio/twirling.mp3")
-
+const alarmSound = new Audio("./audio/twirling.mp3");
 
 // create options for hour
 for (let h = 12; h > 0; h--) {
@@ -40,7 +39,6 @@ for (let m = 2; m > 0; m--) {
   tabMenu[3].firstElementChild.insertAdjacentHTML("afterend", createOptions);
 }
 
-
 // ring alarm
 
 function ringAlarm(time) {
@@ -54,14 +52,12 @@ function ringAlarm(time) {
 
 // function to stop alarm
 
-
-
 function clearAlarm() {
   alarmSound.pause();
 
   alarmIcon.firstElementChild.classList.add("fa-spin");
   alarmIcon.firstElementChild.classList.remove("fa-shake");
-  console.log("stop alarm")
+  console.log("stop alarm");
   if (alarmTimeout) {
     clearTimeout(alarmTimeout);
     console.log("alarm stopped");
@@ -69,7 +65,6 @@ function clearAlarm() {
 }
 
 // set clock
-
 
 function setClock() {
   let dt = new Date();
@@ -89,7 +84,7 @@ function setClock() {
   hr = hr < 10 ? "0" + hr : hr;
   min = min < 10 ? "0" + min : min;
   sec = sec < 10 ? "0" + sec : sec;
-  
+
   let currentTime = `${hr} : ${min} : ${sec} ${period}`;
 
   clockDisplay.innerHTML = currentTime;
@@ -99,11 +94,7 @@ function setClock() {
       ringAlarm(currentTime);
     }
   });
-
-  
 }
-
-
 
 // reset alarm time
 function reset() {
@@ -113,7 +104,7 @@ function reset() {
   const session = document.querySelector("#session");
   hr.selectedIndex = "Hr";
   min.selectedIndex = "Min";
-  sec.selectedIndex = "Sec"
+  sec.selectedIndex = "Sec";
   session.selectedIndex = "Meridian";
 }
 
@@ -136,6 +127,7 @@ function setAlarm() {
     console.log(alarmList);
     console.log(alarmList.length);
     alarmView(selectedTime);
+    alert(`Alarm is set for time ${selectedTime}.`);
     reset();
   } else {
     alert(`${selectedTime} is already set!!!`);
@@ -169,7 +161,6 @@ remove = (value) => {
   console.log(value);
   alarmList = alarmList.filter((t) => t != value);
   console.log(alarmList);
-  
 };
 
 setInterval(setClock, 1000);
